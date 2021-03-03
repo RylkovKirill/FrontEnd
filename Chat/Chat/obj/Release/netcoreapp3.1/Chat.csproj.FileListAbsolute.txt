@@ -1,0 +1,12 @@
+C:\Projects\Chat\Chat\bin\Release\netcoreapp3.1\Chat.exe
+C:\Projects\Chat\Chat\bin\Release\netcoreapp3.1\Chat.deps.json
+C:\Projects\Chat\Chat\bin\Release\netcoreapp3.1\Chat.runtimeconfig.json
+C:\Projects\Chat\Chat\bin\Release\netcoreapp3.1\Chat.runtimeconfig.dev.json
+C:\Projects\Chat\Chat\bin\Release\netcoreapp3.1\Chat.dll
+C:\Projects\Chat\Chat\bin\Release\netcoreapp3.1\Chat.pdb
+C:\Projects\Chat\Chat\obj\Release\netcoreapp3.1\Chat.AssemblyInfoInputs.cache
+C:\Projects\Chat\Chat\obj\Release\netcoreapp3.1\Chat.AssemblyInfo.cs
+C:\Projects\Chat\Chat\obj\Release\netcoreapp3.1\Chat.csproj.CoreCompileInputs.cache
+C:\Projects\Chat\Chat\obj\Release\netcoreapp3.1\Chat.dll
+C:\Projects\Chat\Chat\obj\Release\netcoreapp3.1\Chat.pdb
+C:\Projects\Chat\Chat\obj\Release\netcoreapp3.1\Chat.genruntimeconfig.cache
