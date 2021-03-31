@@ -78,7 +78,9 @@ header {
   color:  grey;
 }
 
-.navbar a.active {
+.navbar a:focus {
+  color: aqua;
+  outline: 0;
 }
 
 .navbar div {
@@ -94,12 +96,37 @@ header {
 
 @media screen and (max-width:480px), 
        screen and (max-device-width:480px)
- {
-   header {
-     display: flex;
-     flex-direction: column;
-     justify-content: center;
-     align-items: center;
+{
+  .menu-checkbox{
+    display:block;
+    opacity: 0;
+  }
+
+  .menu-checkbox:focus ~ .menu-icon #menuIconLine1,
+  .menu-checkbox:focus ~ .menu-icon #menuIconLine2,
+  .menu-checkbox:focus ~ .menu-icon #menuIconLine3 {
+    animation: background-color-change 15s infinite;
+  }
+
+  @keyframes background-color-change {
+    0% { background-color: rgb(0, 183, 255); }
+    10% { background-color: rgb(0, 155, 255); }
+    20% { background-color: rgb(5, 0, 255); }
+    30% { background-color: rgb(110, 0, 255); }
+    40% { background-color: rgb(255, 0, 245); }
+    50% { background-color: rgb(255, 0, 100);}
+    60% { background-color: rgb(255, 0, 245); }
+    70% { background-color: rgb(111, 0, 255); }
+    80% { background-color: rgb(5, 0, 255); }
+    90% { background-color: rgb(0, 155, 255); }
+    100% { background-color: aqua;}
+  }
+
+  header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     }
 
    .menu-icon { 
@@ -134,24 +161,13 @@ header {
     
     #menuSection1, #menuSection2  { display: none; }
     #menu input:checked ~ #menuSection1, #menu input:checked ~ #menuSection2 { display: block; }
-
-
-    /*  */
-
-
 }
-
 
 section {
   overflow:auto;
   height: 100%;
   width:  100%;
 }
-
-/* header div {
-  padding: 0%;
-  margin: 0%;
-} */
 
 footer {
     left: 0;
@@ -163,6 +179,11 @@ footer {
     position: fixed;
     background-color: var(--primaryBackgroundColor1);
     box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2), 0 3px 6px 0 rgba(0, 0, 0, 0.1);
+}
+
+footer a:focus {
+  color: aqua;
+  outline: 0;
 }
 
 main {
@@ -181,14 +202,20 @@ button {
   border: none;
   outline: none;
   font-size: 18pt;
+  transform: scale(1.0, 1.0);
+  transition-duration: 300ms;
+}
+
+button:focus {
+  box-shadow: 0 0 0 2pt aqua;
+  transform: scale(1.05, 1.05);
+  transition-duration: 300ms;
 }
 
 button:active {
-  box-shadow: inset 0 1pt 1pt black, 0 1pt gray, 0 0 1pt gray;
-}
-
-button:not(:active) {
-  box-shadow: none;
+  box-shadow: inset 0 2pt 2pt 0 black, 
+              inset 0 0 4pt 0 gray,
+                    0 0 0 2pt aqua;
 }
 
 .button-animated {
@@ -196,7 +223,7 @@ button:not(:active) {
 }
 
 .button-animated:active {
-  box-shadow: inset 0 1pt 1pt black, 0 1pt gray, 0 0 2pt gray;
+  box-shadow: inset 0 1pt 1pt black, 0 1pt gray, 0 0 2pt gray, 0 0 0 2pt aqua;
 }
 
 .button-animated:after {
@@ -349,39 +376,36 @@ li {
                                       var(--primaryBackgroundColor4) 40%);
 } 
 
- .card__form {
+.card-form {
   display: grid;
   justify-content: center;
   grid-template-columns: 1fr 1fr;
   column-gap: 30pt;
   row-gap: 15pt;
-  /* padding: 15pt; */
 }
 
-.card__form_front {
+.card-form__front-item {
   grid-column: 1;
 }
 
-.card__form_back {
+.card-form__back-item {
   grid-column: 2;
 }
 
-.card__form_front, .card__form_back {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-items: center;
-  border-radius: 24pt;
-  background: linear-gradient(-45deg, var(--primaryBackgroundColor1) 30%, 
-                                      var(--primaryBackgroundColor2) 30%, 
-                                      var(--primaryBackgroundColor3) 40%);
-  padding: 50pt;
-  margin: auto;
-  box-shadow: 0 3px 6px 0 rgba(30, 30, 30, 0.2), 0 3px 6px 0 rgba(0, 0, 0, 0.1);
-}
-
-.card__form_option {
+.card-form__option-item {
   grid-column: 1 / -1;
+}
+
+.card-form__front-item:hover,
+.card-form__back-item:hover,
+.card-form__option-item:hover {
+  transform: scale(1.1, 1.1);
+  transition-duration: 300ms;
+}
+
+.card-form__front-item,
+.card-form__back-item,
+.card-form__option-item {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -392,22 +416,27 @@ li {
                                       var(--primaryBackgroundColor3) 40%);
   padding: 50pt;
   margin: auto;
-  box-shadow: 0 3px 6px 0 rgba(30, 30, 30, 0.2), 0 3px 6px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 3px 6px 0 rgba(30, 30, 30, 0.2),
+              0 3px 6px 0 rgba(0, 0, 0, 0.1);
+  transform: scale(1.0, 1.0);
+  transition-duration: 300ms;
+  transition-timing-function: ease-out;
 }
 
-@media screen and (max-width:480px), 
-       screen and (max-device-width:480px)
- {
-  .card__form {
+
+
+@media screen and (max-device-width:480px)
+{
+  .card-form {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
   }
 
-  .card__form_front, 
-  .card__form_back ,
-  .card__form_option {
+  .card-form__front-item, 
+  .card-form__back-item ,
+  .card-form__option-item {
     width: 75%;
   }
 }
@@ -483,8 +512,29 @@ select {
   border: none;
 }
 
+select:focus {
+  outline: none;
+  box-shadow: 0 0 0 2pt aqua;    
+}
+
 select option {
   margin: 40px;
   background-color: var(--primaryBackgroundColor1);
 }
+
+.icon > i {
+  color: var(--fontColor);
+  transform: scale(1.0, 1.0);
+  transition-duration: 300ms;
+  transition-timing-function: ease-out;
+}
+
+.icon:focus > i {
+  color: aqua;
+  transform: scale(1.2, 1.2);
+  transition-duration: 300ms;
+  transition-timing-function: ease-out;
+}
+
+
 
