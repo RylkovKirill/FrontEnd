@@ -1,0 +1,64 @@
+:root {
+  --background: linear-gradient(to right bottom,
+                                      #d16ba5, 
+                                      #c777b9, 
+                                      #ba83ca, 
+                                      #aa8fd8, 
+                                      #9a9ae1, 
+                                      #8aa7ec, 
+                                      #79b3f4, 
+                                      #69bff8, 
+                                      #52cffe, 
+                                      #41dfff, 
+                                      #46eefa, 
+                                      #5ffbf1);
+  --fontColor: black;
+
+  --primaryBackgroundColor1: #ffb300;  
+  --primaryBackgroundColor2: #816a1c; 
+  --primaryBackgroundColor3: #bd8709; 
+  --primaryBackgroundColor4: #a17715; 
+  
+  --secondaryBackgroundColor: gray; 
+  
+  --buttonPrimaryBackgroundColor1: #057D9F;
+  --buttonPrimaryBackgroundColor2: #0e586d;
+  --buttonPrimaryBackgroundColor3: #1ab3dd;
+  				
+  --buttonSecondaryBackgroundColor1: #754ad1;
+  --buttonSecondaryBackgroundColor2: #431e92;
+  --buttonSecondaryBackgroundColor3: #8E6DD7;
+}
+
+[data-theme="dark"] {
+
+  --background: linear-gradient(170deg, rgba(49, 57, 73, 0.8) 20%, 
+                                        rgba(49, 57, 73, 0.5) 20%, 
+                                        rgba(49, 57, 73, 0.5) 35%, 
+                                        rgba(41, 48, 61, 0.6) 35%, 
+                                        rgba(41, 48, 61, 0.8) 45%, 
+                                        rgba(31, 36, 46, 0.5) 45%, 
+                                        rgba(31, 36, 46, 0.8) 75%, 
+                                        rgba(49, 57, 73, 0.5) 75%),
+                linear-gradient(45deg, rgba(20, 24, 31, 0.8) 0%, 
+                                       rgba(41, 48, 61, 0.8) 50%, 
+                                       rgba(82, 95, 122, 0.8) 50%,
+                                       rgba(133, 146, 173, 0.8) 100%) 
+                                       #313950;
+
+  --primaryBackgroundColor1: #313950; 
+  --primaryBackgroundColor2: #292b30; 
+  --primaryBackgroundColor3: #313949; 
+  --primaryBackgroundColor4: #1f232b; 
+
+  --secondaryBackgroundColor: whitesmoke; 
+  --fontColor: whitesmoke;
+
+  --buttonPrimaryBackgroundColor1: #045ca8;
+  --buttonPrimaryBackgroundColor2: #143661;
+  --buttonPrimaryBackgroundColor3: #105088;
+  
+  --buttonSecondaryBackgroundColor1: #6e0732;
+  --buttonSecondaryBackgroundColor2: #2a080f;
+  --buttonSecondaryBackgroundColor3: #550817;
+}

@@ -1,0 +1,91 @@
+.theme-switch {
+  margin-top: 3pt;
+  display: inline-block;
+  position: relative;
+  width: 40pt;
+}
+
+.theme-switch input{
+  /* display:none; */
+  opacity: 0;
+}
+
+.theme-switch input:focus + .slider {
+  animation: shadow-color-change 15s infinite;
+}
+
+@keyframes shadow-color-change {
+  0% { 
+    box-shadow: 0 0 0 2pt rgb(0, 183, 255); 
+  }
+  10% { 
+    box-shadow: 0 0 0 2pt rgb(0, 155, 255); 
+  }
+  20% { 
+    box-shadow: 0 0 0 2pt rgb(5, 0, 255); 
+  }
+  30% { 
+    box-shadow: 0 0 0 2pt rgb(110, 0, 255);
+  }
+  40% { 
+    box-shadow: 0 0 0 2pt rgb(255, 0, 245);
+  }
+  50% { 
+    box-shadow: 0 0 0 2pt rgb(255, 0, 100);
+  }
+  60% { 
+    box-shadow: 0 0 0 2pt rgb(255, 0, 245); 
+  }
+  70% { 
+    box-shadow: 0 0 0 2pt rgb(111, 0, 255);
+  }
+  80% { 
+    box-shadow: 0 0 0 2pt rgb(5, 0, 255);
+  }
+  90% { 
+    box-shadow: 0 0 0 2pt rgb(0, 155, 255);
+  }
+  100% { 
+    box-shadow: 0 0 0 2pt aqua;
+  }
+}
+  
+.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  cursor: pointer;
+  background-color: gray;
+  transition: .4s;
+}
+  
+.slider:before {
+  position: absolute;
+  height: 18pt;
+  width: 18pt;
+  left: 2.75pt;
+  bottom: 5.5pt;
+  content: "";
+  background-color: whitesmoke;
+  transition: .4s;
+}
+  
+input:checked + .slider {
+  background-color: #ffb300;
+}
+  
+input:checked + .slider:before {
+  -webkit-transform: translateX(16pt);
+  -ms-transform: translateX(16pt);
+  transform: translateX(16pt);
+}
+  
+.slider.round {
+  border-radius: 20pt;
+}
+  
+.slider.round:before {
+  border-radius: 50%;
+}

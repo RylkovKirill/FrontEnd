@@ -1,0 +1,40 @@
+dialog {
+  height: 50%;
+    width:50%;
+    padding: 3pt;
+    border-radius: 6pt;
+    background-color: var(--primaryBackgroundColor1);
+}
+
+dialog::backdrop {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+dialog > form {
+    height: 100%;
+}
+
+fieldset {
+    height: calc(100% - 21pt);
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    border: 0;
+}
+
+fieldset input {
+    margin-top: 10pt;
+    width: 100%;
+}
+
+legend {
+    padding: 12pt;
+    text-align: center;
+    font-size: 24pt
+}
+
+fieldset  button {
+  margin-top: 24pt;
+}
+
+ 
