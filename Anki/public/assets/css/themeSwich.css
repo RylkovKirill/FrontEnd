@@ -6,7 +6,6 @@
 }
 
 .theme-switch input{
-  /* display:none; */
   opacity: 0;
 }
 
@@ -15,39 +14,17 @@
 }
 
 @keyframes shadow-color-change {
-  0% { 
-    box-shadow: 0 0 0 2pt rgb(0, 183, 255); 
-  }
-  10% { 
-    box-shadow: 0 0 0 2pt rgb(0, 155, 255); 
-  }
-  20% { 
-    box-shadow: 0 0 0 2pt rgb(5, 0, 255); 
-  }
-  30% { 
-    box-shadow: 0 0 0 2pt rgb(110, 0, 255);
-  }
-  40% { 
-    box-shadow: 0 0 0 2pt rgb(255, 0, 245);
-  }
-  50% { 
-    box-shadow: 0 0 0 2pt rgb(255, 0, 100);
-  }
-  60% { 
-    box-shadow: 0 0 0 2pt rgb(255, 0, 245); 
-  }
-  70% { 
-    box-shadow: 0 0 0 2pt rgb(111, 0, 255);
-  }
-  80% { 
-    box-shadow: 0 0 0 2pt rgb(5, 0, 255);
-  }
-  90% { 
-    box-shadow: 0 0 0 2pt rgb(0, 155, 255);
-  }
-  100% { 
-    box-shadow: 0 0 0 2pt aqua;
-  }
+  0% {box-shadow: 0 0 0 2pt rgb(0, 183, 255);}
+  10% {box-shadow: 0 0 0 2pt rgb(0, 155, 255);}
+  20% {box-shadow: 0 0 0 2pt rgb(5, 0, 255);}
+  30% {box-shadow: 0 0 0 2pt rgb(110, 0, 255);}
+  40% {box-shadow: 0 0 0 2pt rgb(255, 0, 245);}
+  50% {box-shadow: 0 0 0 2pt rgb(255, 0, 100);}
+  60% {box-shadow: 0 0 0 2pt rgb(255, 0, 245);}
+  70% {box-shadow: 0 0 0 2pt rgb(111, 0, 255);}
+  80% {box-shadow: 0 0 0 2pt rgb(5, 0, 255);}
+  90% {box-shadow: 0 0 0 2pt rgb(0, 155, 255);}
+  100% {box-shadow: 0 0 0 2pt aqua;}
 }
   
 .slider {

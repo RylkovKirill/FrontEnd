@@ -308,7 +308,7 @@ li {
 
 .authentication-warning{
   border-radius: 24pt;
-  background: #313949;
+  background:  var(--primaryBackgroundColor1);
   align-self: center;
   padding: 100pt;
   margin: auto;
@@ -397,15 +397,13 @@ li {
 }
 
 .card-form__front-item:hover,
-.card-form__back-item:hover,
-.card-form__option-item:hover {
+.card-form__back-item:hover {
   transform: scale(1.1, 1.1);
   transition-duration: 300ms;
 }
 
 .card-form__front-item,
-.card-form__back-item,
-.card-form__option-item {
+.card-form__back-item {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -423,7 +421,20 @@ li {
   transition-timing-function: ease-out;
 }
 
-
+.card-form__option-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  border-radius: 24pt;
+  background: linear-gradient(-45deg, var(--primaryBackgroundColor1) 30%, 
+                                      var(--primaryBackgroundColor2) 30%, 
+                                      var(--primaryBackgroundColor3) 40%);
+  padding: 50pt;
+  margin: auto;
+  box-shadow: 0 3px 6px 0 rgba(30, 30, 30, 0.2),
+              0 3px 6px 0 rgba(0, 0, 0, 0.1);
+}
 
 @media screen and (max-device-width:480px)
 {
@@ -438,19 +449,6 @@ li {
   .card-form__back-item ,
   .card-form__option-item {
     width: 75%;
-  }
-}
-
-@media screen and (max-device-width:480px) {
-  .collections-section__ul, .cards-wraper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
- }
-
-  .collection, .card{
-    padding: 20pt 80pt;
   }
 }
 
@@ -474,6 +472,36 @@ li {
   padding: 90pt;
   transform-style: preserve-3d;
   transition: 0.6s;
+}
+
+@media screen and (max-device-width:480px) {
+  .collections-section__ul, .cards-wraper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+ }
+
+  .collection, .card{
+    padding: 40pt 120pt;
+  }
+
+  h2 {
+    margin: 12pt;
+    font-size: 48pt;
+  }
+  button {
+    margin: 12pt;
+    font-size: 36pt;
+  }
+
+  .card-animated {
+    padding: 140pt;
+  }
+
+  .collection > button, .card > button{
+    width: 100%;
+  }
 }
 
 .card-wrapper:hover .card-animated {
@@ -518,7 +546,7 @@ select:focus {
 }
 
 select option {
-  margin: 40px;
+  /* margin: 40px; */
   background-color: var(--primaryBackgroundColor1);
 }
 
