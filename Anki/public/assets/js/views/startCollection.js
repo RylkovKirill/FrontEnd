@@ -127,7 +127,7 @@ let startCollection = {
         function saveStatistics(timeWasted, cardStudied, result) {
             var currentDate = (new Date()).toLocaleDateString().replace(/[.]/g, '');
             var updates = {};
-            console.log((new Date()).toLocaleDateString().replace(/[.]/g, ''));
+            //console.log((new Date()).toLocaleDateString().replace(/[.]/g, ''));
             updates[`users/${currentUserId}/statistics/timeWasted/`] = firebase.database.ServerValue.increment(timeWasted);
             updates[`users/${currentUserId}/statistics/cardStudied/`] = firebase.database.ServerValue.increment(cardStudied);
             updates[`users/${currentUserId}/statistics/${currentDate}/timeWasted/`] = firebase.database.ServerValue.increment(timeWasted);

@@ -55,6 +55,9 @@ let collection = {
                     }
                     else {
                         collectionId = firebase.database().ref().child('cards').push().key;
+                        firebase.database().ref('users/' + currentUserId + '/userInformation/').update({
+                            collectionsCreated:  firebase.database.ServerValue.increment(1)
+                        });
                     }
                     firebase.database().ref('users/' + currentUserId + '/collections/' + collectionId).update({
                         collectionName: collectionNameInput.value,
@@ -81,7 +84,6 @@ let collection = {
                             }
                         }
                     }
-
                     window.location.hash = '#/collections';
                 }
             });

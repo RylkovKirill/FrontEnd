@@ -63,6 +63,9 @@ let card = {
                     }
                     else {
                         cardId = firebase.database().ref().child('cards').push().key;
+                        firebase.database().ref('users/' + currentUserId + '/userInformation/').update({
+                            cardsCreated:  firebase.database.ServerValue.increment(1)
+                        });
                     }
                     firebase.database().ref('users/' + currentUserId + '/cards/' + cardId).update({
                         frontValue: frontValueInput.value,
