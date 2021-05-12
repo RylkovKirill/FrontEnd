@@ -49,6 +49,9 @@ let register = {
                     currentUser.updateProfile({
                         displayName: userName
                     }).then(function () {
+                        firebase.database().ref('users/' +  currentUser.uid + '/userInformation/').set({
+                            registrationDate : (new Date()).getFullYear()
+                        });
                         localStorage.setItem('currentUserId', currentUser.uid);
                         window.location.hash = '#/home';
                     }).catch(function (error) {
